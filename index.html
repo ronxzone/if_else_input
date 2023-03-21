@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+        .div1 {text-align: center;}
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="body" style="background-color: white">
+    <div class="div1">
+        <h2>Put a number between 1-50 to see result in console.</h2>
+    <input id="chk"/>
+    <button onclick="submit()">Submit</button>
+  
+
+    <script>
+      function submit() {
+        //empty
+        if (chk.value == "") {
+          console.log("put a number buddy");
+        } else {
+          //under 10 ud value
+          if (chk.value <= 10) {
+            console.log(chk.value);
+          } else {
+            //same number twice
+            if (chk.value >= 11 && chk.value <= 20) {
+              console.log(chk.value);
+              console.log(chk.value);
+            } else {
+              //name instead of number
+              if (chk.value >= 21 && chk.value <= 30) {
+                console.log("Ron");
+              } else {
+                //times four
+                if (chk.value >= 31 && chk.value <= 40) {
+                  console.log(chk.value * 4);
+                } else {
+                  //plus 200
+                  if (chk.value >= 41 && chk.value <= 50) {
+                    console.log(parseInt(chk.value) + 200);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <br /><br /><br />
+    <h2>Choose a number between 1-4 to change the background color.</h2>
+    <input id="num" />
+    <button onclick="color(num.value)">Background color</button>
+    <script>
+      const myElement = document.getElementById("body");
+      function color(inum) {
+        if (num.value == 2) {
+          myElement.style.backgroundColor = "red";
+        } else {
+          if (num.value == 3) {
+            myElement.style.backgroundColor = "green";
+          } else {
+            if (num.value == 4) {
+              myElement.style.backgroundColor = "blue";
+            } else {
+              if (num.value == 1) {
+                myElement.style.backgroundColor = "white";
+              }
+            }
+          }
+        }
+      }
+    </script>
+    </div>
+  </body>
+</html>
